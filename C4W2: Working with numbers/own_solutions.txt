@@ -1,0 +1,39 @@
+=== To Access MySQL inside terminal ==== 
+
+mysql; 
+
+
+
+=== Task 1 ==== 
+
+CREATE DATABASE cm_devices; 
+USE cm_devices; 
+
+CREATE TABLE devices(
+    DeviceID INT, 
+    DeviceName VARCHAR(50), 
+    Price DECIMAL
+);
+
+INSERT INTO devices (DeviceID, DeviceName, Price) VALUES (1, "iPhone XR 1", 1500.50); 
+INSERT INTO devices (DeviceID, DeviceName, Price) VALUES (2, "Samsung SX", 1200.50); 
+INSERT INTO devices (DeviceID, DeviceName, Price) VALUES (3, "Nokia 730", 1050.00); 
+
+SHOW tables; 
+SELECT * FROM devices; 
+SHOW columns FROM devices; 
+
+
+
+=== Additional Task === 
+
+CREATE TABLE stock(
+    DeviceID INT, 
+    Quantity INT, 
+    TotalCost DECIMAL 
+);
+
+SHOW tables; 
+SHOW columns FROM stock; 
+
+
