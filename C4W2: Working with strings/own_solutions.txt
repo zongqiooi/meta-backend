@@ -1,0 +1,35 @@
+=== Task 1 === 
+
+mysql; 
+CREATE DATABASE cm_devices; 
+USE cm_devices; 
+
+CREATE TABLE customers(
+    username CHAR(9), 
+    fullName VARCHAR(50), 
+    email VARCHAR(255)
+); 
+
+INSERT INTO customers (username, fullName, email) VALUES ("Custom001", "John Johnson", "J.Johnson@email.net");
+INSERT INTO customers (username, fullName, email) VALUES ("Custom002", "Carl Schmidt", "Carl.Schmidt@email.net");
+INSERT INTO customers (username, fullName, email) VALUES ("Custom003", "Yara Suliman", "Y.S@email.net");
+
+SELECT * FROM customers; 
+SHOW tables; 
+SHOW columns FROM customers; 
+
+
+=== Additional Task (Using "TEXT" datatype) === 
+
+mysql; 
+CREATE DATABASE cm_devices; 
+USE cm_devices; 
+
+CREATE TABLE feedback(
+    feedbackID CHAR(8),
+    feedbackType VARCHAR(100),
+    feedbackComment TEXT(500)
+); 
+
+SHOW tables; 
+SHOW columns FROM feedback; 

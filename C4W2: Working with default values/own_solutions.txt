@@ -1,0 +1,45 @@
+=== Task 1 ===
+
+mysql; 
+CREATE DATABASE cm_devices; 
+USE cm_devices; 
+
+CREATE TABLE address(
+    customerID INT NOT NULL, 
+    street VARCHAR(255), 
+    postcode VARCHAR(10), 
+    town VARCHAR(30) DEFAULT "Harrow" 
+); 
+
+INSERT INTO address(customerID, street, postcode) VALUES (1, "10 Carsten Rd.", "HA3 0AE"); 
+INSERT INTO address(customerID, street, postcode) VALUES (2, "15 Denise Ave.", "HA3 0AE"); 
+INSERT INTO address(customerID, street, postcode) VALUES (3, "13 Merkel Ave.", "HA3 0AE"); 
+INSERT INTO address(customerID, street, postcode) VALUES (4, "12 Carsten Rd.", "HA3 0AE"); 
+INSERT INTO address(customerID, street, postcode) VALUES (5, "15 Hellen way", "HA3 0AE"); 
+INSERT INTO address(customerID, street, postcode) VALUES (6, "13 Carsten Rd.", "HA3 0AE"); 
+INSERT INTO address(customerID, street, postcode, town) VALUES (7, "11 Malika Rd.", "HA3 0AE", "Kingsbury"); 
+
+SELECT * FROM address; 
+
+SHOW tables; 
+SHOW columns FROM address; 
+
+
+=== Additional Task === 
+
+DROP TABLE address; 
+
+CREATE TABLE address(
+    customerID INT NOT NULL, 
+    street VARCHAR(255), 
+    postcode VARCHAR(10) DEFAULT "HA97DE", 
+    town VARCHAR(30) DEFAULT "Harrow" 
+); 
+
+INSERT INTO address(customerID, street, postcode) VALUES (1, "13 Carsten Rd.", "HA3 0AE"); 
+INSERT INTO address(customerID, street, postcode, town) VALUES (2, "11 Malika Rd.", "HA3 0AE", "Kingsbury"); 
+INSERT INTO address(customerID, street, town) VALUES (3, "11 Malika Rd.", "Kingsbury"); 
+
+SELECT * FROM address; 
+
+
