@@ -6,7 +6,7 @@ A collection of assignment submissions to Meta Back-End Developer Professional C
 
 1. Python
 2. Django
-3. SQL
+3. MySQL
 
 # Courses
 
