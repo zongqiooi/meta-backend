@@ -10,14 +10,14 @@ CREATE DATABASE cm_devices;
 USE cm_devices; 
 
 CREATE TABLE devices(
-    DeviceID INT, 
-    DeviceName VARCHAR(50), 
-    Price DECIMAL
+    deviceID INT, 
+    deviceName VARCHAR(50), 
+    price DECIMAL
 );
 
-INSERT INTO devices (DeviceID, DeviceName, Price) VALUES (1, "iPhone XR 1", 1500.50); 
-INSERT INTO devices (DeviceID, DeviceName, Price) VALUES (2, "Samsung SX", 1200.50); 
-INSERT INTO devices (DeviceID, DeviceName, Price) VALUES (3, "Nokia 730", 1050.00); 
+INSERT INTO devices (deviceID, deviceName, price) VALUES (1, "iPhone XR 1", 1500.50); 
+INSERT INTO devices (deviceID, deviceName, price) VALUES (2, "Samsung SX", 1200.50); 
+INSERT INTO devices (deviceID, deviceName, price) VALUES (3, "Nokia 730", 1050.00); 
 
 SHOW tables; 
 SELECT * FROM devices; 
@@ -28,9 +28,9 @@ SHOW columns FROM devices;
 === Additional Task === 
 
 CREATE TABLE stock(
-    DeviceID INT, 
-    Quantity INT, 
-    TotalCost DECIMAL 
+    deviceID INT, 
+    quantity INT, 
+    totalCost DECIMAL 
 );
 
 SHOW tables; 
