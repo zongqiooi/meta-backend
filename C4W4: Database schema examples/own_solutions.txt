@@ -1,0 +1,58 @@
+=== Task 1 === 
+
+mysql; 
+CREATE DATABASE chinook;
+USE chinook; 
+
+CREATE TABLE employee(
+    lastName VARCHAR(20), 
+    firstName VARCHAR(20),
+    title VARCHAR(30),
+    reportsTo INT, 
+    birthDate DATE, 
+    hireDate DATE, 
+    address VARCHAR(70),
+    PRIMARY KEY (employeeId)
+); 
+
+CREATE TABLE customers(
+    lastName VARCHAR(20), 
+    firstName VARCHAR(20), 
+    compnay VARCHAR(30), 
+    phone VARCHAR(20), 
+    email VARCHAR(100), 
+    city VARCHAR(20), 
+    address VARCHAR(70),
+    PRIMARY KEY (customerId)
+); 
+
+CREATE TABLE invoices(
+    invoiceDate DATE, 
+    billingAddress VARCHAR(100), 
+    billingCity VARCHAR(50),
+    FOREIGN KEY (customerId) REFERENCES customers (customerId), 
+    PRIMARY KEY (invoiceId)
+); 
+
+CREATE TABLE artists(
+    name VARCHAR(120), 
+    PRIMARY KEY (artistId) 
+); 
+
+CREATE TABLE albums(
+    title VARCHAR(160), 
+    FOREIGN KEY (artistId) REFERENCES artists (artistId), 
+    FOREIGN KEY (locationId) REFERENCES location (locationId), 
+    PRIMARY KEY (albumId)
+); 
+
+CREATE TABLE tracks(
+    name VARCHAR(200), 
+    unitPrice DECIMAL, 
+    FOREIGN KEY (albumId) REFERENCES albums (albumId), 
+    PRIMARY KEY (trackId)
+); 
+
+CREATE TABLE location(
+    PRIMARY KEY (locationId)
+); 
